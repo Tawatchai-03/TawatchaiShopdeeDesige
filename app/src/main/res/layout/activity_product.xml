@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,67 +5,86 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="4dp">
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@drawable/register_bg"> <!-- ใช้พื้นหลังตามธีม -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        app:cardCornerRadius="10dp"
-        android:layout_gravity="center">
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="12dp"
+        android:elevation="8dp"> <!-- ปรับ elevation ให้มีเงาและมิติ -->
 
         <ImageView
             android:id="@+id/imageViewFile"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/baseline_add_shopping_cart_24" />
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:orientation="horizontal"
-        android:padding="2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="space_between"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
         <TextView
             android:id="@+id/txtProductName"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="กางแกงขายาว"
             android:textSize="22sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textColor="#000000" /> <!-- ขยายขนาดและจัดให้ตรงกลาง -->
 
         <TextView
             android:id="@+id/txtPrice"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$200"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="end" /> <!-- จัดตำแหน่งทางขวา -->
     </LinearLayout>
+
     <TextView
         android:id="@+id/txtProductDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="สีขาว ผ้ายืด ขนาด M"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="#555555" /> <!-- ปรับสีให้ดูนุ่มนวล -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
         <Button
             android:id="@+id/btnRemoveProduct"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="16dp"
             app:backgroundTint="#f2f2f2"
-            android:background ="@drawable/button"
+            android:background="@drawable/button"
             android:textColor="#4800ff"
             android:textSize="20sp"
             android:text="-" />
@@ -74,7 +92,7 @@
         <EditText
             android:id="@+id/editQuantity"
             android:layout_width="80dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="number"
             android:textAlignment="center"
             android:background="@null"
@@ -84,24 +102,27 @@
 
         <Button
             android:id="@+id/btnAddProduct"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
             app:backgroundTint="#f2f2f2"
-            android:background ="@drawable/button_cart"
+            android:background="@drawable/button_cart"
             android:textColor="#4800ff"
             android:textSize="20sp"
             android:text="+" />
     </LinearLayout>
+
     <Button
         android:id="@+id/btnAddToCart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:text="เพิ่มไปยังตะกร้า"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:background ="@drawable/button_cart"/>
+        android:background="@drawable/button_cart"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

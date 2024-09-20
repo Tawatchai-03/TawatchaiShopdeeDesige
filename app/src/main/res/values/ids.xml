@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnAddToCart" type="id" />
+    <item name="btnAddProduct" type="id" />
+    <item name="editQuantity" type="id" />
+    <item name="btnRemoveProduct" type="id" />
+    <item name="txtProductDetail" type="id" />
+    <item name="txtProductName" type="id" />
+    <item name="txtPrice" type="id" />
+    <item name="textViewProductName" type="id" />
+    <item name="textViewPrice" type="id" />
+</resources>
